@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD de Retirada de Bolas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>CRUD de Retirada de Bolas</h1>
+  
+  <form id="form">
+    <label for="tipo">Tipo de Bola:</label>
+    <input type="text" id="tipo" required><br><br>
+    
+    <label for="hrRetirada">Hora de Retirada:</label>
+    <input type="datetime-local" id="hrRetirada" required><br><br>
+    
+    <label for="hrDevolucao">Hora de Devolução:</label>
+    <input type="datetime-local" id="hrDevolucao" required><br><br>
+    
+    <button type="submit">Adicionar</button>
+  </form>
+  
+  <table id="bolasTable">
+    <thead>
+      <tr>
+        <th>Tipo de Bola</th>
+        <th>Hora de Retirada</th>
+        <th>Hora de Devolução</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody id="bolasTableBody"></tbody>
+  </table>
+
+  <div id="updateFormContainer">
+    <h2>Atualizar Retirada de Bola</h2>
+    <form id="updateForm">
+      <input type="hidden" id="updateId">
+      
+      <label for="updateTipo">Tipo de Bola:</label>
+      <input type="text" id="updateTipo" required><br><br>
+      
+      <label for="updateHrRetirada">Hora de Retirada:</label>
+      <input type="datetime-local" id="updateHrRetirada" required><br><br>
+      
+      <label for="updateHrDevolucao">Hora de Devolução:</label>
+      <input type="datetime-local" id="updateHrDevolucao" required><br><br>
+      
+      <button type="submit">Atualizar</button>
+    </form>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
